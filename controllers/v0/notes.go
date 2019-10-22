@@ -11,7 +11,7 @@ type (
 	}
 )
 
-func SetNotesRoutes(e *echo.Echo) {
+func SetNotesRoutes(e *echo.Group) {
 
 	api := NotesApi{}
 

@@ -1,7 +1,7 @@
 package models
 
 import (
-	"github.com/bragnikita/hints-database/controllers/util"
+	"github.com/bragnikita/hints-database/util"
 	"github.com/stretchr/testify/assert"
 	"io/ioutil"
 	"os"

@@ -2,6 +2,7 @@ package models
 
 import (
 	json2 "encoding/json"
+	"github.com/bragnikita/hints-database/util"
 	"io"
 	"io/ioutil"
 	"sync"
@@ -51,6 +52,7 @@ func (n *Note) IsNew() bool {
 func (s *NotesService) Init() error {
 	s.cacheMutex.Lock()
 	defer s.cacheMutex.Unlock()
+	util.MustDo(s.Persistance.Init())
 
 	list, err := s.Persistance.List()
 	if err != nil {
